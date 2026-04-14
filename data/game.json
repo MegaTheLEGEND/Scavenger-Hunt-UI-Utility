@@ -1,8 +1,8 @@
 {
   "timer": {
-    "startTime": "2026-04-14T08:13:18.484Z",
+    "startTime": null,
     "durationSeconds": 7200,
-    "started": true,
+    "started": false,
     "paused": false,
     "pausedAt": null
   },
