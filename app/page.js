@@ -480,7 +480,10 @@ if (screen === 'lobby') {
   return (
     <div className={styles.lobbyWrap}>
       <header className={styles.header}>
-        <div className={styles.headerTitle}>⬡ SCAVENGER HUNT</div>
+  <div className={styles.headerTitle}>
+    <span className={styles.titleFull}>⬡ SCAVENGER HUNT</span>
+    <span className={styles.titleShort}>⬡</span>
+  </div>
 
         <div
           className={styles.profilePill}
@@ -993,16 +996,18 @@ if (screen === 'lobby') {
             <div className={styles.teamCodeRow}>
               <span className={styles.teamCodeLabel}>CODE</span>
               <span className={styles.teamCode}>{myTeam.code}</span>
-              {isLeader && (
-                <button className={styles.lockBtn} onClick={toggleLock}>
-                  {myTeam.locked ? '🔒 LOCKED' : '🔓 OPEN'}
-                </button>
-              )}
-              {isLeader && (
-                <button className={`${styles.copyLinkBtn} ${copySuccess ? styles.copyLinkSuccess : ''}`} onClick={copyJoinLink}>
-                  {copySuccess ? '✓ COPIED!' : '⎘ SHARE LINK'}
-                </button>
-              )}
+              <div className={styles.teamActions}>
+                {isLeader && (
+                  <button className={styles.lockBtn} onClick={toggleLock}>
+                    {myTeam.locked ? '🔒 LOCKED' : '🔓 OPEN'}
+                  </button>
+                )}
+                {isLeader && (
+                  <button className={`${styles.copyLinkBtn} ${copySuccess ? styles.copyLinkSuccess : ''}`} onClick={copyJoinLink}>
+                    {copySuccess ? '✓ COPIED!' : '⎘ SHARE LINK'}
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Score */}

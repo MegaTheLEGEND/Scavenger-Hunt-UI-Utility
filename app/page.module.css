@@ -643,8 +643,10 @@
   background: #111; border: 1px solid var(--border);
   border-radius: 3px; padding: 10px 14px;
 }
+.teamActions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 .teamCodeLabel { font-family: var(--font-mono); font-size: 0.6rem; color: var(--muted); letter-spacing: 0.1em; }
 .teamCode { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.2em; color: var(--accent-yellow); flex: 1; }
+
 .lockBtn {
   background: none; border: 1px solid var(--border); color: var(--muted);
   font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em;
