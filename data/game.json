@@ -175,30 +175,5 @@
     "allowSelfJoin": true,
     "allowUserCreate": true
   },
-  "teams": [
-    {
-      "id": "aaq2ztv",
-      "name": "this is a team",
-      "leaderId": "vc0hgbuft3rmnxlghm6",
-      "locked": true,
-      "code": "NMQ06",
-      "members": [
-        {
-          "id": "vc0hgbuft3rmnxlghm6",
-          "name": "Im Sean",
-          "bio": "",
-          "joinedAt": "2026-04-14T08:13:54.038Z"
-        },
-        {
-          "id": "63yrw5ppgxqmnybnfq9",
-          "name": "sadasdawddddddd",
-          "bio": "",
-          "joinedAt": "2026-04-14T08:14:08.837Z"
-        }
-      ],
-      "doneIds": [],
-      "adminCreated": true,
-      "createdAt": "2026-04-14T08:13:53.958Z"
-    }
-  ]
+  "teams": []
 }
