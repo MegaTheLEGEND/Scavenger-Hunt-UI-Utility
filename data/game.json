@@ -1,0 +1,204 @@
+{
+  "timer": {
+    "startTime": "2026-04-14T08:13:18.484Z",
+    "durationSeconds": 7200,
+    "started": true,
+    "paused": false,
+    "pausedAt": null
+  },
+  "rules": [
+    "Team vehicles and walking only. No bikes, scooters, skateboards, or ride-shares. Shopping carts allowed.",
+    "Max team size = number of seatbelts. All members present at start; group stays the same throughout.",
+    "All challenge photos must include 2 or more team members.",
+    "All photos must be on ONE phone before handoff to judges.",
+    "All teams start at the exact same time from the exact same place.",
+    "Each team may stealth-photo at most 3 other teams — one photo per target team max."
+  ],
+  "requirements": [
+    "1 designated driver with a car",
+    "At least 1 rider",
+    "$5 per player entry fee"
+  ],
+  "disqualifications": [
+    "Use of more than one transport device other than your entered car and your own legs.",
+    "Any other infraction at judge's discretion."
+  ],
+  "challenges": [
+    {
+      "id": 1,
+      "type": "action",
+      "pts": 200,
+      "desc": "Perform a full cartwheel in front of a bakery.",
+      "note": "Must be clearly a bank",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "type": "picture",
+      "pts": 150,
+      "desc": "Get a photo with someone walking a dog over 50 lbs.",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "type": "grab",
+      "pts": 300,
+      "desc": "Bring back a physical menu from a sit-down restaurant.",
+      "note": "No screenshots",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "type": "action",
+      "pts": 250,
+      "desc": "Get a stranger to fist bump every member of your team at once.",
+      "note": "All members visible",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "type": "picture",
+      "pts": 100,
+      "desc": "Take a photo in front of a mural or piece of public street art.",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "type": "grab",
+      "pts": 200,
+      "desc": "Obtain a business card from a local business.",
+      "note": "Must be physical card",
+      "image": ""
+    },
+    {
+      "id": 7,
+      "type": "action",
+      "pts": 350,
+      "desc": "Convince a stranger to moonwalk for at least 3 full seconds.",
+      "note": "",
+      "image": ""
+    },
+    {
+      "id": 8,
+      "type": "picture",
+      "pts": 175,
+      "desc": "Photo with a person in a uniform (any profession).",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 9,
+      "type": "grab",
+      "pts": 250,
+      "desc": "A receipt totalling under $1.00.",
+      "note": "Judges inspect date/time",
+      "image": ""
+    },
+    {
+      "id": 10,
+      "type": "action",
+      "pts": 300,
+      "desc": "Record a team member doing a handstand for 3+ seconds in a parking lot.",
+      "note": "Must be public",
+      "image": ""
+    },
+    {
+      "id": 11,
+      "type": "picture",
+      "pts": 125,
+      "desc": "Photo next to a vehicle older than 1990.",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 12,
+      "type": "grab",
+      "pts": 400,
+      "desc": "A takeout container from a restaurant you did not eat at.",
+      "note": "Unused & empty",
+      "image": ""
+    },
+    {
+      "id": 13,
+      "type": "action",
+      "pts": 275,
+      "desc": "Get a stranger to high-five a team member while saying \"YEET.\"",
+      "note": "",
+      "image": ""
+    },
+    {
+      "id": 14,
+      "type": "picture",
+      "pts": 200,
+      "desc": "Team photo inside (or directly in front of) a fire station.",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 15,
+      "type": "grab",
+      "pts": 350,
+      "desc": "A paper map (not self-printed).",
+      "note": "Judges may verify",
+      "image": ""
+    },
+    {
+      "id": 16,
+      "type": "action",
+      "pts": 225,
+      "desc": "Perform the worm in a grocery store aisle.",
+      "note": "Must be visible in video",
+      "image": ""
+    },
+    {
+      "id": 17,
+      "type": "picture",
+      "pts": 150,
+      "desc": "Photo with a sign that has a typo or obvious error on it.",
+      "note": "2+ members required",
+      "image": ""
+    },
+    {
+      "id": 18,
+      "type": "grab",
+      "pts": 300,
+      "desc": "A leaf from a non-commercial tree taller than a house.",
+      "note": "No replicas",
+      "image": ""
+    }
+  ],
+  "teamMode": {
+    "enabled": true,
+    "maxTeams": 8,
+    "allowSelfJoin": true,
+    "allowUserCreate": true
+  },
+  "teams": [
+    {
+      "id": "aaq2ztv",
+      "name": "this is a team",
+      "leaderId": "vc0hgbuft3rmnxlghm6",
+      "locked": true,
+      "code": "NMQ06",
+      "members": [
+        {
+          "id": "vc0hgbuft3rmnxlghm6",
+          "name": "Im Sean",
+          "bio": "",
+          "joinedAt": "2026-04-14T08:13:54.038Z"
+        },
+        {
+          "id": "63yrw5ppgxqmnybnfq9",
+          "name": "sadasdawddddddd",
+          "bio": "",
+          "joinedAt": "2026-04-14T08:14:08.837Z"
+        }
+      ],
+      "doneIds": [],
+      "adminCreated": true,
+      "createdAt": "2026-04-14T08:13:53.958Z"
+    }
+  ]
+}
