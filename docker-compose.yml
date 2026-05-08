@@ -1,8 +1,20 @@
 services:
   scavenger-hunt:
+    image: scavenger-hunt
     build:
-      context: https://github.com/MegaTheLEGEND/Scavenger-Hunt-UI-Utility.git
-      dockerfile: Dockerfile
+      context: .
+      dockerfile_inline: |
+        FROM node:20-alpine
+        WORKDIR /app
+        RUN wget -q https://github.com/MegaTheLEGEND/Scavenger-Hunt-UI-Utility/archive/refs/heads/main.zip \
+            && unzip main.zip \
+            && mv Scavenger-Hunt-UI-Utility-main/* . \
+            && rm -rf Scavenger-Hunt-UI-Utility-main main.zip
+        RUN npm install
+        RUN npm run build
+        RUN cp -r /app/data /app/data-default
+        EXPOSE 3000
+        CMD sh -c '[ ! -f /app/data/game.json ] && cp -r /app/data-default/. /app/data/; npm start'
     ports:
       - "3000:3000"
     environment:
