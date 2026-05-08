@@ -9,8 +9,8 @@ const next = require('next');
 const { WebSocketServer } = require('ws');
 
 // File system for persistent game state storage
-const { readFileSync, writeFileSync } = require('fs');
-const { resolve } = require('path');
+const { readFileSync, writeFileSync, existsSync, createReadStream } = require('fs');
+const { resolve, extname } = require('path');
 
 // Determine environment mode
 const dev = process.env.NODE_ENV !== 'production';
@@ -21,6 +21,13 @@ const handle = app.getRequestHandler();
 
 // Path to persistent game state file
 const GAME_PATH = resolve(__dirname, 'data/game.json');
+
+// MIME types for image serving
+const mimeTypes = {
+  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+  '.png': 'image/png', '.gif': 'image/gif',
+  '.webp': 'image/webp',
+};
 
 /**
  * Reads the current game state from disk
@@ -241,7 +248,19 @@ app.prepare().then(() => {
 
   // Create HTTP server (Next.js handler)
   const server = createServer((req, res) => {
-    handle(req, res, parse(req.url, true));
+    const parsedUrl = parse(req.url, true);
+
+    // Serve uploaded images directly from disk at runtime
+    // This ensures images uploaded after build time are still served in production
+    if (parsedUrl.pathname.startsWith('/images/')) {
+      const filePath = resolve(__dirname, 'public', parsedUrl.pathname.slice(1));
+      if (existsSync(filePath)) {
+        res.setHeader('Content-Type', mimeTypes[extname(filePath)] || 'application/octet-stream');
+        return createReadStream(filePath).pipe(res);
+      }
+    }
+
+    handle(req, res, parsedUrl);
   });
 
   // Attach WebSocket server on /ws endpoint
