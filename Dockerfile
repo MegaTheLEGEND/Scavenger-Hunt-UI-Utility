@@ -9,7 +9,7 @@ RUN wget -q https://github.com/MegaTheLEGEND/Scavenger-Hunt-UI-Utility/archive/r
     && rm -rf Scavenger-Hunt-UI-Utility-main main.zip
 
 # Install dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps && npm cache clean --force
 
 # Build the Next.js app
 RUN npm run build
