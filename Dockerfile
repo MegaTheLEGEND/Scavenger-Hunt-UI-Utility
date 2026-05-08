@@ -1,25 +1,23 @@
-
 FROM node:20-alpine
- 
+
 WORKDIR /app
- 
-# Files are already here from the build context (GitHub repo)
-COPY . .
- 
+
+# Download latest repo from GitHub
+RUN wget -q https://github.com/MegaTheLEGEND/Scavenger-Hunt-UI-Utility/archive/refs/heads/main.zip \
+    && unzip main.zip \
+    && mv Scavenger-Hunt-UI-Utility-main/* . \
+    && rm -rf Scavenger-Hunt-UI-Utility-main main.zip
+
 # Install dependencies
 RUN npm install
- 
+
 # Build the Next.js app
 RUN npm run build
- 
-# Stash a copy of the default data OUTSIDE the volume mount point
-# so we can copy it in at runtime if the volume is empty
+
+# Stash default data outside volume mount so entrypoint can seed it
 RUN cp -r /app/data /app/data-default
- 
-# Copy entrypoint script
-RUN chmod +x /entrypoint.sh
- 
+
 EXPOSE 3000
- 
-ENTRYPOINT ["/entrypoint.sh"]
- 
+
+# Seed data volume on first run, then start the app
+CMD sh -c '[ ! -f /app/data/game.json ] && cp -r /app/data-default/. /app/data/; npm start'
