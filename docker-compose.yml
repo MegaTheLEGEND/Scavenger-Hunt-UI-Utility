@@ -10,7 +10,7 @@ services:
             && unzip main.zip \
             && mv Scavenger-Hunt-UI-Utility-main/* . \
             && rm -rf Scavenger-Hunt-UI-Utility-main main.zip
-        RUN npm install
+        RUN npm install --legacy-peer-deps && npm cache clean --force
         RUN npm run build
         RUN cp -r /app/data /app/data-default
         EXPOSE 3000
